@@ -104,10 +104,11 @@ python src/main.py
 This will initiate the process of reading, analyzing, and updating the student situations in your Google Sheets document.
 
 ## Logs and Info
-After running the application, you shuld she this:
+After running the application, you should see this:
+
 ![image](https://github.com/pedr0alencar/tunts-rocks-challenge/assets/122798848/bc52555a-fd0d-446d-aa5a-465b9070c6c0)
 
-it means that the data succesfuly updated, the logs are all tested and if something go worng it will show you what isn't working on the application.
+It means that the data successfully updated, the logs are all tested and if something goes wrong it will show you what isn't working on the application.
 
 
 ## Code Explanation
