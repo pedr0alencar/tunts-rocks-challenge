@@ -4,36 +4,36 @@ import logging
 import sys
 
 
-# Definindo os escopos corretos
+# Defining the correct scopes
 SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets',
     'https://www.googleapis.com/auth/drive'
 ]
 
-# Carregando as credenciais da conta de serviço
+# Loading credentials from the service account
 SERVICE_ACCOUNT_FILE = (r'C:\Users\User\PycharmProjects\desafio-tunts-rocks\credentials\tunts-rocks-pedro-alencar'
                         r'-928cdef6d732.json')
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
-# Autenticando e criando o cliente da API
+# Authenticating and creating the API client
 client = gspread.authorize(creds)
 
 
 def get_worksheet(spreadsheet_id, sheet_name):
-    # Use o ID para abrir a planilha
+    # Open the spreadsheet using its ID
     spreadsheet = client.open_by_key(spreadsheet_id)
     worksheet = spreadsheet.worksheet(sheet_name)
     return worksheet
 
 
 def read_student_data(worksheet):
-    # Lê os dados, excluindo o cabeçalho
-    student_data = worksheet.get_all_values()[3:]  # assume que a primeira linha é cabeçalho
+    # Read the data, excluding the header
+    student_data = worksheet.get_all_values()[3:]  # assumes the first row is the header
     if not student_data:
-        logging.warning('Nenhum dado foi lido da planilha.')
+        logging.warning('No data was read from the spreadsheet.')
         sys.exit(1)
     else:
-        logging.info('Dados da planilha lidos com sucesso.')
+        logging.info('Spreadsheet data successfully read.')
     return student_data
 
 
@@ -51,15 +51,12 @@ def update_student_situations(worksheet, student_results):
             'values': [[student[3]]],
         })
 
-    # Imprime os valores que serão escritos para depuração
-
-
-    # Atualiza as células em batch
+    # Update the cells in batch
     try:
         worksheet.batch_update(update_cells)
-        logging.info('Dados inseridos na planilha.')
+        logging.info('Data inserted into the spreadsheet.')
     except Exception as e:
         logging.error(f'Failed to update cells in batch: {e}')
         sys.exit(1)
-        #print(f'Failed to update cells in batch: {e}')
+
 
