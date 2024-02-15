@@ -106,6 +106,7 @@ This will initiate the process of reading, analyzing, and updating the student s
 ## Logs and Info
 After running the application, you shuld she this:
 ![image](https://github.com/pedr0alencar/tunts-rocks-challenge/assets/122798848/bc52555a-fd0d-446d-aa5a-465b9070c6c0)
+
 it means that the data succesfuly updated, the logs are all tested and if something go worng it will show you what isn't working on the application.
 
 
