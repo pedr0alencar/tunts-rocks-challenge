@@ -3,7 +3,7 @@
 ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-# Tunts.Rocks Challenge - Student Situation Analysis
+# Desafio Tunts.Rocks - Análise de situação de estudante
 Desafio técnico da Tutnts.Rocks - Dev Training Program  
 
 ## Sumário
@@ -130,7 +130,9 @@ Imagens da planilha antes e depois da execução:
 ## Considerações de segurança
 Este projeto inclui dados sensíveis, como chaves de API, para fins de demonstração. Em um cenário real, essas informações não seriam expostas publicamente. 
 
-Make it fun, see you soon (-;
+---
+Make it fun, see you soon (-;  
+Work hard Play hard!
 ```
 Speedy Dev off
 ```
