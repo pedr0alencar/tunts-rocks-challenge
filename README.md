@@ -134,7 +134,7 @@ This project includes sensitive data, such as API keys, for demonstration purpos
 
 ---
 
-Make it fun, see you soon (-;
+Make it fun, see you soon (-;  
 Work hard Play hard!
 ```
 Speedy Dev off
