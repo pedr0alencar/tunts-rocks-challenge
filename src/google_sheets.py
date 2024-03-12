@@ -11,7 +11,7 @@ SCOPES = [
 ]
 
 # Loading credentials from the service account
-SERVICE_ACCOUNT_FILE = 'credentials/tunts-rocks-pedro-alencar-928cdef6d732.json'
+SERVICE_ACCOUNT_FILE = '../credentials/tunts-rocks-pedro-alencar-928cdef6d732.json'
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # Authenticating and creating the API client
